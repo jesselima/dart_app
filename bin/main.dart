@@ -1,11 +1,9 @@
-import 'package:dart_app/feline.dart';
-
+import 'package:dart_app/someclass.dart';
 
 main(List<String> arguments) {
 
-  Feline cat = Feline();
-
-  cat.test();
+  SomeClass someClass = SomeClass();
+  someClass.sayHello();
 
 }
 
