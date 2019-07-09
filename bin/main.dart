@@ -12,8 +12,8 @@ main(List<String> arguments) {
 T add<T extends num>(T value, List<T> items) {
 
   T ret = value;
-  items.forEach((value) {
-     ret = ret + value;
+  items.forEach((valueFromAListPosition) {
+     ret = ret + valueFromAListPosition;
   });
   return ret;
 
