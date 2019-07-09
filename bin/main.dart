@@ -1,9 +1,9 @@
-import 'package:dart_app/someclass.dart';
+import 'package:dart_app/racecar.dart';
 
 main(List<String> arguments) {
 
-  SomeClass someClass = SomeClass();
-  someClass.sayHello();
+  RaceCar raceCar = RaceCar();
+  raceCar.honk();
 
 }
 
