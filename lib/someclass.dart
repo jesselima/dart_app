@@ -6,4 +6,8 @@ class SomeClass {
     print("Hello World!");
   }
 
+  String printDivider() {
+    return "\n-----------------------\n";
+  }
+
 }
