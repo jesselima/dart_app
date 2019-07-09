@@ -9,13 +9,15 @@ main(List<String> arguments) {
 }
 
 
-T add<T extends num>(T value, List<T> items) {
+T add<T extends num>(T inputValue, List<T> items) {
 
-  T ret = value;
+  T returnValue = inputValue;
+
   items.forEach((valueFromAListPosition) {
-     ret = ret + valueFromAListPosition;
+    returnValue = returnValue + valueFromAListPosition;
   });
-  return ret;
+
+  return returnValue;
 
 }
 
