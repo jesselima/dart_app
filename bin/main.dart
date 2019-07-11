@@ -1,5 +1,8 @@
 import 'dart:io';
 
+
+int counter = 0; // Used in callback
+
 main(List<String> arguments) {
 
   print("\n\n######################\nOS Variables:\n");
@@ -20,12 +23,51 @@ main(List<String> arguments) {
   print(Platform.executable); // i.e output: C:\Dart\dart-sdk\bin\dart.exe
 
 
-  // ENVIRONMENTS VARIABLE
+  // TODO Info ->  ENVIRONMENTS VARIABLES
   print("\n\nEnvironment variables:\n");
   
   Platform.environment.keys.forEach((key) => {
     print("${key} ${Platform.environment[key]}")
   });
 
-}
+
+
+  // TODO FOR LINUX ONLY - List all files in a directory
+//  Process.run("ls", ["-l"]).then((ProcessResult results) {
+//    print(results.stdout);
+//    print("Exit code: ${results.exitCode}"); // 0 is good!
+//  });
+
+
+
+  // TODO Info ->  Communicating with processes
+
+  // LINUX ONLY
+  
+//  Process.start("cat", []).then((Process process) {
+//
+//    // Transform th out put
+//    process.stdout.transform(utf8.decoder).listen((onData) {
+//      print(onData);
+//    });
+//
+//    // Send to the process
+//    process.stdin.write("Hello Worl");
+//    
+//    // Stop the process
+//    Process.killPid(process.pid); // Send a signal to shutdown the process. It can hurt some processes, so attention when using it!
+//
+//    // get the exit code
+//    process.exitCode.then((int code) {
+//      print("Exit code: ${code}");
+//      //exit
+//      exit(0);
+//    });
+//
+//  });
+
+
+} // CLOSES MAIN()
+
+
 
