@@ -1,15 +1,16 @@
 import 'dart:math';
 import 'dart:typed_data';
-
+import 'dart:convert';
+import 'dart:collection';
 import 'package:pointycastle/pointycastle.dart';
 
 main(List<String> arguments) {
 
-  print(randomBytes(8));
-  print(randomBytes(16));
+
 
 }
 
+// SECURE RANDOM NUMBERS
 Uint8List randomBytes(int length) {
 
   final rnd = SecureRandom("AES/CTR/AUTO-SEED-PRNG");
@@ -28,4 +29,15 @@ Uint8List randomBytes(int length) {
   var bytes = rnd.nextBytes(length);
   return bytes;
 
+}
+
+
+// DERIVING KEYS
+Uint8List createUintListFromString(String value) => Uint8List.fromList(utf8.encode(value));
+// Logging for test:
+void display(String title, Uint8List value) {
+  print("${title}");
+  print("${value}");
+  print("\nValue base64Encode:\n${base64Encode(value)}");
+  print("");
 }
