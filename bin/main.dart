@@ -17,7 +17,14 @@ main(List<String> arguments) {
       }
     });
 
-  String zippedFilePath = "C:\\android-projects\\FLUTTER\\zip-test\\test.zip";
+  String zippedFilePath;
+  if(Platform.isWindows) {
+    zippedFilePath = "C:\\android-projects\\FLUTTER\\zip-test\\test.zip";
+  } else {
+    print("Please update the zippedFilePath according to you system!");
+    return;
+  }
+
 
   zip(fileList, zippedFilePath);
 
