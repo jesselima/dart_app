@@ -2,13 +2,14 @@ name: dart_app
 description: A sample command-line application.
 # version: 1.0.0
 # homepage: https://www.example.com
-# author: JesseFariasdeLima <p000jesse.farias@prservicos.com.br>
+# author: JesseFariasdeLima
 
 environment:
   sdk: '>=2.4.0 <3.0.0'
 
-#dependencies:
-#  path: ^1.6.0
+dependencies:
+  path: ^1.6.0
+  archive: ^2.0.10
 
 dev_dependencies:
   pedantic: ^1.7.0
