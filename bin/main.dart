@@ -31,7 +31,6 @@ Uint8List randomBytes(int length) {
 
 }
 
-
 // DERIVING KEYS
 Uint8List createUintListFromString(String value) => Uint8List.fromList(utf8.encode(value));
 
