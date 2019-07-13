@@ -17,9 +17,11 @@ main(List<String> arguments) {
       }
     });
 
-  String zippedFilePath = 'C:\\android-projects\\FLUTTER\\dart_app\\test.zip';
+  String zippedFilePath = "C:\\android-projects\\FLUTTER\\zip-test\\test.zip";
 
   zip(fileList, zippedFilePath);
+
+  unzip(zippedFilePath, "C:\\android-projects\\FLUTTER\\zip-test\\decompressed");
 
 
 } // close main()
@@ -49,6 +51,17 @@ void zip(List<String> fileList, String zippedFilePath) {
 }
 
 
-void unzip() {
+void unzip(String zippedFilePath, String path) {
+
+  File file = File(zippedFilePath);
+  Archive archive = ZipDecoder().decodeBytes(file.readAsBytesSync());
+
+  archive.forEach((ArchiveFile archiveFile) {
+    File file = File(path + "/" + archiveFile.name);
+    file.createSync(recursive: true);
+    file.writeAsBytesSync(archiveFile.content);
+  });
+
+  print("Decompressed!");
 
 }
