@@ -334,7 +334,7 @@
         <entry key="watcher">
           <value>
             <list>
-              <option value="$USER_HOME$/AppData/Roaming/Pub/Cache/hosted/pub.dartlang.org/watcher-0.9.7+10/lib" />
+              <option value="$USER_HOME$/AppData/Roaming/Pub/Cache/hosted/pub.dartlang.org/watcher-0.9.7+12/lib" />
             </list>
           </value>
         </entry>
@@ -402,7 +402,7 @@
       <root url="file://$USER_HOME$/AppData/Roaming/Pub/Cache/hosted/pub.dartlang.org/test_core-0.2.7/lib" />
       <root url="file://$USER_HOME$/AppData/Roaming/Pub/Cache/hosted/pub.dartlang.org/typed_data-1.1.6/lib" />
       <root url="file://$USER_HOME$/AppData/Roaming/Pub/Cache/hosted/pub.dartlang.org/vm_service_lib-3.22.0/lib" />
-      <root url="file://$USER_HOME$/AppData/Roaming/Pub/Cache/hosted/pub.dartlang.org/watcher-0.9.7+10/lib" />
+      <root url="file://$USER_HOME$/AppData/Roaming/Pub/Cache/hosted/pub.dartlang.org/watcher-0.9.7+12/lib" />
       <root url="file://$USER_HOME$/AppData/Roaming/Pub/Cache/hosted/pub.dartlang.org/web_socket_channel-1.0.14/lib" />
       <root url="file://$USER_HOME$/AppData/Roaming/Pub/Cache/hosted/pub.dartlang.org/yaml-2.1.16/lib" />
     </CLASSES>
