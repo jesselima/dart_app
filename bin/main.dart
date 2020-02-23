@@ -3,19 +3,19 @@ import 'dart:io';
 
 main(List<String> arguments) {
 
-  int gzip = testCompression(GZIP);
-  int zlib = testCompression(ZLIB);
+  var gzip = testCompression(GZIP);
+  var zlib = testCompression(ZLIB);
 
-  print("GZIP: ${gzip}");
-  print("ZLIB: ${zlib}");
+  print('GZIP: ${gzip}');
+  print('ZLIB: ${zlib}');
 
 }
 
 String generateData() {
-  String data = "";
+  var data = '';
 
-  for(int i = 0; i < 500; i++) {
-    data = data + "Hello World\r\n";
+  for(var i = 0; i < 5000; i++) {
+    data = data + 'Hello World\r\n';
   }
 
   return data;
@@ -23,8 +23,9 @@ String generateData() {
 
 int testCompression(var codec) {
 
-  String data = generateData();
+  var data = generateData();
 
+  print('COMPRESSION $codec CODEC:');
   // Original data
   List original = utf8.encode(data);
   // Compressed data
@@ -32,13 +33,11 @@ int testCompression(var codec) {
   // Decompressed data
   List decompress = codec.decode(compressed);
 
-  print("Original: ${original.length}");
-  print("Compressed: ${compressed.length}");
-  print("Decompressed: ${decompress.length}");
+  print('Original: ${original.length}');
+  print('Compressed: ${compressed.length}');
+  print('Decompressed: ${decompress.length}');
 
-  print("");
-
-  String decoded = utf8.decode(decompress);
+  var decoded = utf8.decode(decompress);
   assert(data == decoded);
 
   return compressed.length;
